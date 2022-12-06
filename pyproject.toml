@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydsa-queue"
+version = "0.1.0"
+description = "A suite of Python namespaced packages that provides implementations of the Queue ADT and related algorithms."
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["data structures", "algorithms", "adt", "queue", "fifo"]
+license = {text = "BSD 3-Clause License"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers", 
+    "License :: OSI Approved :: BSD 3-Clause License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "pydantic",
+    "typer",
+    "rich",
+]
+
+[project.optional-dependencies]
+test = [
+    "pylint",
+    "black",
+    "isort",
+    "pytest",
+    "coverage",
+    "pytest-cov",
+    "tox",
+]
+
+dev = [
+    "mypy", 
+    "pre-commit", 
+    "bump2version",
+    "twine",
+]
+
+doc = [
+    "mkdocs",
+    "mkdocs-include-markdown-plugin",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "mkdocs-autorefs",
+]
+
+[tool.pylint.format]
+max-line-length = 88
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
