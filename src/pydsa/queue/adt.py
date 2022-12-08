@@ -1,3 +1,5 @@
+"""Queue ADT"""
+
 from collections.abc import Sized, Iterable
 from typing import TypeVar
 from abc import abstractmethod
@@ -15,7 +17,7 @@ class IQueue(Sized, Iterable):
     Pythonic way of iterating over elements and querying collection size.
 
     Note:
-        Implementations of this ADT must implement the abstract methods 
+        Implementations of this ADT must implement the abstract methods
         `__len__()`, `__iter__()`, `front()`, `enqueue()`, and `dequeue()`.
     """
 
@@ -35,7 +37,6 @@ class IQueue(Sized, Iterable):
         Returns:
             Elem: The front element.
         """
-        pass
 
     @abstractmethod
     def enqueue(self, elem: Elem) -> None:
@@ -44,7 +45,6 @@ class IQueue(Sized, Iterable):
         Args:
             elem (Elem): The element to insert.
         """
-        pass
 
     @abstractmethod
     def dequeue(self) -> Elem:
@@ -53,4 +53,3 @@ class IQueue(Sized, Iterable):
         Returns:
             Elem: _description_
         """
-        pass
