@@ -57,6 +57,9 @@ doc = [
 [tool.pylint.format]
 max-line-length = 88
 
+[tool.pylint.MASTER]
+ignore = '__init__.py'
+
 [tool.black]
 line-length = 88
 skip-string-normalization = true
