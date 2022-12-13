@@ -4,7 +4,8 @@ repo_url: https://github.com/engineer/pydsa-queue
 repo_name: engineer/pydsa-queue
 #strict: true
 nav:
-  - Home: index.md
+  - ADT: index.md
+  - Impl: circ_array_queue.md
   - Installation: installation.md
   - Usage: usage.md
   - Modules: api.md
