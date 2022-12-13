@@ -39,9 +39,19 @@ class CircArrayQueue(IQueue, Generic[Elem]):
         self._num_elems = 0
 
     def __len__(self) -> int:
+        """Returns the number of elements in the queue.
+
+        Returns:
+            int: Queue size.
+        """
         return self._num_elems
 
     def __iter__(self) -> Generator[Elem, None, None]:
+        """Iterates over all elements from the front to the end of the queue.
+
+        Yields:
+            The next unprocessed element.
+        """
         for i in range(len(self)):
             idx = (self._start_idx + i) % self._capacity
             yield self._elems[idx]
