@@ -1,3 +1,3 @@
-# Documentation for `CircArrayQueue`
+# Class `CircArrayQueue`
 
 ::: pydsa.queue.CircArrayQueue

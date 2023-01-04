@@ -1,16 +1,20 @@
 site_name: PyDSA - Queue
-site_url: https://engineer.github.io/pydsa-queue
-repo_url: https://github.com/engineer/pydsa-queue
-repo_name: engineer/pydsa-queue
+site_url: https://KriztoferY.github.io/pydsa-queue
+repo_url: https://github.com/KriztoferY/pydsa-queue
+repo_name: KriztoferY/pydsa-queue
 #strict: true
 nav:
-  - ADT: index.md
-  - Impl: circ_array_queue.md
+  - Home: index.md
+  - "Quick Tour": intro.md
   - Installation: installation.md
-  - Usage: usage.md
-  - Modules: api.md
-  - Contributing: contributing.md
-  - Changelog: changelog.md
+  - "API Reference":
+      - "Queue ADT": adt.md
+      - "Circular Array Queue": circ_array_queue.md
+      - "Linked List Queue": linked_list_queue.md
+      - "Algorithms on Queue ADT": algos.md
+  # - Contributing: contributing.md
+  # - Changelog: changelog.md
+use_directory_urls: false
 theme:
   name: material
   language: en
@@ -23,6 +27,8 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.top
 markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -44,7 +50,7 @@ markdown_extensions:
   - toc:
       baselevel: 2
       permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+      # slugify: !!python/name:pymdownx.slugs.uslugify
   - meta
 plugins:
   - include-markdown
