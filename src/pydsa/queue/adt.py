@@ -4,6 +4,8 @@ from collections.abc import Sized, Iterable
 from typing import TypeVar
 from abc import abstractmethod
 
+from pydsa.utils import ElemTypeName
+
 __all__ = (
     'IQueue',
 )
@@ -13,12 +15,15 @@ Elem = TypeVar('Elem')
 
 class IQueue(Sized, Iterable):
     """
-    `IQueue` provides an interface for the Queue ADT that supports the
+    ``IQueue`` provides an interface for the Queue ADT that supports the
     Pythonic way of iterating over elements and querying collection size.
 
-    Note:
-        Implementations of this ADT must implement the abstract methods
-        `__len__()`, `__iter__()`, `front()`, `enqueue()`, and `dequeue()`.
+    Notes:
+        Implementations of this ADT must implement the abstract methods 
+        ``__len__()``, ``__iter__()``, ``front()``, ``enqueue()``, and 
+        ``dequeue()``. In addition, the abstract property ``element_type`` also 
+        has to be implemented, and it is suggested to acquire this data via 
+        ``__init__()`` with an argument of type ``pydsa.utils.ElemTypeName``.
     """
 
     @property
@@ -29,6 +34,35 @@ class IQueue(Sized, Iterable):
             bool: True if the queue contains no elements.
         """
         return len(self) == 0
+
+    def __str__(self) -> str:
+        """String representation of the queue, listing elements in queue order
+        from left to right.
+
+        Example:
+            ``[3,1,4,1,5]``
+
+        Returns:
+            str: The string representation.
+        """
+        s = '['
+        if not self.empty:
+            itr = iter(self)
+            s = f'{s}{next(itr)}'
+            for elem in itr:
+                s = f'{s},{elem}'
+        s = f'{s}]'
+
+        return s
+
+    @property
+    @abstractmethod
+    def element_type(self) -> ElemTypeName:
+        """String representation of the type of each element in the queue.
+
+        Returns:
+            Type: The element type string.
+        """
 
     @abstractmethod
     def front(self) -> Elem:
