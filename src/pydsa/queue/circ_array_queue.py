@@ -57,6 +57,11 @@ class CircArrayQueue(IQueue, Generic[Elem]):
             yield self._elems[idx]
 
     @property
+    def element_type(self) -> ElemTypeName:
+        # Returns the name of the type of each element in the queue.
+        return self._elem_type
+
+    @property
     def _capacity(self) -> int:
         # Returns the maximum number of elements that the queue can store.
         return len(self._elems)
@@ -132,11 +137,20 @@ class CircArrayQueue(IQueue, Generic[Elem]):
 
 if __name__ == '__main__':
     q = CircArrayQueue[int](4, 'int')
-    q.enqueue(3)
-    q.enqueue(1)
-    q.enqueue(4)
-    q.enqueue(1)
-    q.enqueue(5)
+
+    print(f"element type: '{q.element_type}'")
+
+    for x in (3, 1, 4, 1, 5):
+        q.enqueue(x)
+
+    print(q)
+
     for x in q:
         print(f'{x} ', end='')
     print()
+
+    while not q.empty:
+        print(f'dequeue: front = {q.front()} | size = {len(q)}')
+        q.dequeue()
+
+    print(q, f'(queue is empty: {q.empty})')
