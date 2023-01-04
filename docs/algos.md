@@ -1,5 +1,3 @@
-# Algorithms on Queue ADT
+::: pydsa.queue.algo
 
-All algorithms are independent of implementation of the Queue ADT.
-
-## Merging two queues
+::: pydsa.queue.algo.merge

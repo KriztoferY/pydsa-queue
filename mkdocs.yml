@@ -12,6 +12,7 @@ nav:
       - "Circular Array Queue": circ_array_queue.md
       - "Linked List Queue": linked_list_queue.md
       - "Algorithms on Queue ADT": algos.md
+      - Utilities: utils.md
   # - Contributing: contributing.md
   # - Changelog: changelog.md
 use_directory_urls: false
