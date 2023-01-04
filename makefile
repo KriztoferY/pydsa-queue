@@ -1,21 +1,21 @@
-sources = pydsa-queue
+SOURCES = pydsa-queue
 
 .PHONY: test format lint unittest coverage pre-commit clean
 test: format lint unittest
 
 format:
-	isort $(sources) tests
-	black $(sources) tests
+	isort $(SOURCES) tests
+	black $(SOURCES) tests
 
 lint:
-	pylint $(sources) tests
-	mypy $(sources) tests
+	pylint $(SOURCES) tests
+	mypy $(SOURCES) tests
 
 unittest:
 	pytest
 
 coverage:
-	pytest --cov=$(sources) --cov-branch --cov-report=term-missing tests
+	pytest --cov=$(SOURCES) --cov-branch --cov-report=term-missing tests
 
 pre-commit:
 	pre-commit run --all-files
