@@ -5,9 +5,13 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![codecov](https://codecov.io/gh/engineer/python-boilerplate/branch/main/graphs/badge.svg)](https://codecov.io/github/engineer/python-boilerplate)
 
-# pydsa-queue
+# pydsa-queue <!-- omit in toc -->
 
-A suite of Python namespaced packages that provides implementations of the Queue ADT and related algorithms.
+<!--intro-start-->
+
+## Introducing PyDSA - Queue <!-- omit in toc -->
+
+**PyDSA - Queue** (`pydsa-queue`) is a suite of Python namespaced packages that provides implementations of the Queue ADT and related algorithms.
 
 Different implementations of the Queue ADT are defined in separate modules.
 
@@ -34,24 +38,63 @@ while not q.empty:
 print(q, f'(queue is empty: {q.empty})')   # ~> "[] (queue is empty: True)"
 
 ```
-A collection of implementation-agnostic algorithms on the Queue ADT is included in a dedicated module.
+A collection of ADT-implementation-agnostic algorithms on the Queue ADT is 
+included in a dedicated module.
 
 ```python
+from operator import gt
 
+from pydsa.queue import CircArrayQueue
+from pydsa.queue.algo import merge
 
+nums1 = (4, 7, 2, 10)
+q1 = CircArrayQueue[int](len(nums1), 'int')
+for num in nums1:
+    q1.enqueue(num)
+
+nums2 = (3, 6, 8, 9, 5, 1)
+q2 = CircArrayQueue[int](len(nums2), 'int')
+for num in nums2:
+    q2.enqueue(num)
+
+merged = merge(q1, q2, gt)
+print(f'merged : {merged}')     # ~> "merged : [4,7,3,6,8,9,5,2,10,1]"
 ```
+<!--intro-end-->
 
-For more details, visit the [documentation site](https://kriztofery.github.io/pydsa-queue).
+For more details, visit the <a href="https://kriztofery.github.io/pydsa-queue" target="_blank">documentation site</a>.
+
+<!--intro-start-->
+
+## Getting Started <!-- omit in toc -->
 
 Here's what you need to get started.
 
 - [Dependencies](#dependencies)
-- [Building \& Testing the Project](#building--testing-the-project)
-- [For Developers \& Contributors](#for-developers--contributors)
+- [Installation](#installation)
 - [License](#license)
-- [Also Want It In Another Language?](#also-want-it-in-another-language)
 
-## Dependencies
+### Dependencies
 
 Not much. Python 3.7+ is the only dependency.
 
+### Installation
+
+Just use `pip`.
+
+```python
+pip install -U pydsa-queue
+```
+
+### License
+
+`pydsa-queue` is licensed under the <a href="https://github.com/KriztoferY/pydsa-queue/blob/main/LICENSE" target="_blank">BSD 3-Clause License</a>.
+
+## Also Want It In Another Language? <!-- omit in toc -->
+
+- C : <a href="https://github.com/KriztoferY/cdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/cdsa-queue" target="_blank">Documentation</a>
+- C++ : <a href="https://github.com/KriztoferY/cppdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/cpppdsa-queue" target="_blank">Documentation</a>
+- Go : <a href="https://github.com/KriztoferY/godsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/godsa-queue" target="_blank">Documentation</a> [coming soon]
+- TypeScript : <a href="https://github.com/KriztoferY/tsdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/tsdsa-queue" target="_blank">Documentation</a>
+
+<!--intro-end-->
