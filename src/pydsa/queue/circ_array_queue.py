@@ -154,3 +154,16 @@ if __name__ == '__main__':
         q.dequeue()
 
     print(q, f'(queue is empty: {q.empty})')
+
+"""
+=== OUTPUT ===
+element type: 'int'
+[3,1,4,1,5]
+3 1 4 1 5 
+dequeue: front = 3 | size = 5
+dequeue: front = 1 | size = 4
+dequeue: front = 4 | size = 3
+dequeue: front = 1 | size = 2
+dequeue: front = 5 | size = 1
+[] (queue is empty: True)
+"""
