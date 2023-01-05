@@ -14,16 +14,15 @@ Elem = TypeVar('Elem')
 
 
 class IQueue(Sized, Iterable):
-    """
-    ``IQueue`` provides an interface for the Queue ADT that supports the
+    """`IQueue` provides an interface for the Queue ADT that supports the
     Pythonic way of iterating over elements and querying collection size.
 
-    Notes:
-        Implementations of this ADT must implement the abstract methods 
-        ``__len__()``, ``__iter__()``, ``front()``, ``enqueue()``, and 
-        ``dequeue()``. In addition, the abstract property ``element_type`` also 
-        has to be implemented, and it is suggested to acquire this data via 
-        ``__init__()`` with an argument of type ``pydsa.utils.ElemTypeName``.
+
+    Implementations of this ADT must implement the abstract methods 
+    `__len__()`, `__iter__()`, `front()`, `enqueue()`, and 
+    `dequeue()`. In addition, the abstract property `element_type` also 
+    has to be implemented, and it is suggested to acquire this data via 
+    `__init__()` with an argument of type `pydsa.utils.ElemTypeName`.
     """
 
     @property
@@ -40,7 +39,7 @@ class IQueue(Sized, Iterable):
         from left to right.
 
         Example:
-            ``[3,1,4,1,5]``
+            `[3,1,4,1,5]`
 
         Returns:
             str: The string representation.

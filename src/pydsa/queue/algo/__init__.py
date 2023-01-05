@@ -1,5 +1,6 @@
 """
-``pydsa.queue.algo`` is a subpackage that contains algorithms on the Queue ADT.
+`pydsa.queue.algo` is a subpackage that contains ADT-implementation-agnostic 
+algorithms on the Queue ADT.
 
 All algorithms are independent of implementation of the Queue ADT.
 """

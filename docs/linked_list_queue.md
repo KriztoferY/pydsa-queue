@@ -1,1 +1,4 @@
-# Documentation for `LinkedListQueue`
+# Class `LinkedListQueue`
+
+Coming soon.
+<!-- ::: pydsa.queue.LinkedListQueue -->
