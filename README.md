@@ -62,7 +62,7 @@ print(f'merged : {merged}')     # ~> "merged : [4,7,3,6,8,9,5,2,10,1]"
 ```
 <!--intro-end-->
 
-For more details, visit the <a href="https://kriztofery.github.io/pydsa-queue" target="_blank">documentation site</a>.
+For more details, visit the <a href="https://KriztoferY.github.io/pydsa-queue" target="_blank">documentation site</a>.
 
 <!--intro-start-->
 
@@ -93,7 +93,7 @@ pip install -U pydsa-queue
 ## Also Want It In Another Language? <!-- omit in toc -->
 
 - C : <a href="https://github.com/KriztoferY/cdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/cdsa-queue" target="_blank">Documentation</a>
-- C++ : <a href="https://github.com/KriztoferY/cppdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/cpppdsa-queue" target="_blank">Documentation</a>
+- C++ : <a href="https://github.com/KriztoferY/cppdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/cppdsa-queue" target="_blank">Documentation</a>
 - Go : <a href="https://github.com/KriztoferY/godsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/godsa-queue" target="_blank">Documentation</a> [coming soon]
 - TypeScript : <a href="https://github.com/KriztoferY/tsdsa-queue" target="_blank">Repository</a> | <a href="https://KriztoferY.github.io/tsdsa-queue" target="_blank">Documentation</a>
 
