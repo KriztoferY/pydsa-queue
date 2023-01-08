@@ -13,6 +13,12 @@
 
 **PyDSA - Queue** (`pydsa-queue`) is a suite of Python namespaced packages that provides implementations of the Queue ADT and related algorithms.
 
+Two implementations of the Queue ADT are included in the project off the shelf:
+
+* `CircArrayQueue` : Circular array based implementation
+
+* `SLListQueue` : Singly linked list based implementation
+
 Different implementations of the Queue ADT are defined in separate modules.
 
 ```python
