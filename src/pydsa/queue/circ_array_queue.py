@@ -58,7 +58,8 @@ class CircArrayQueue(IQueue, Generic[Elem]):
 
     @property
     def element_type(self) -> ElemTypeName:
-        # Returns the name of the type of each element in the queue.
+        """Name of the type of each element in the queue.
+        """
         return self._elem_type
 
     @property
