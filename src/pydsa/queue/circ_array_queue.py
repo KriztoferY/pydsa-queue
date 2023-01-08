@@ -137,24 +137,10 @@ class CircArrayQueue(IQueue, Generic[Elem]):
 
 
 if __name__ == '__main__':
+    from pydsa.queue.queue_demo import run_demo
+
     q = CircArrayQueue[int](4, 'int')
-
-    print(f"element type: '{q.element_type}'")
-
-    for x in (3, 1, 4, 1, 5):
-        q.enqueue(x)
-
-    print(q)
-
-    for x in q:
-        print(f'{x} ', end='')
-    print()
-
-    while not q.empty:
-        print(f'dequeue: front = {q.front()} | size = {len(q)}')
-        q.dequeue()
-
-    print(q, f'(queue is empty: {q.empty})')
+    run_demo(q)
 
 """
 === OUTPUT ===
