@@ -19,8 +19,7 @@ def py_obj_array_type(size: int, item_type: ElemTypeName) -> Type:
     `size` number of objects of `item_type`.
 
     Args:
-        item_type (ElemTypeName): Cell item type -- 'int', 'uint', 'float', 
-        'double', 'object'.
+        item_type (ElemTypeName): Cell item type -- 'int', 'uint', 'float', 'double', 'object'.
 
     Raises:
         ValueError: if `item_type` is not one of allowed options.
