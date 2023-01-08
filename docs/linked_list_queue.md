@@ -1,4 +1,3 @@
-# Class `LinkedListQueue`
+# Class `SLListQueue`
 
-Coming soon.
-<!-- ::: pydsa.queue.LinkedListQueue -->
+::: pydsa.queue.SLListQueue
