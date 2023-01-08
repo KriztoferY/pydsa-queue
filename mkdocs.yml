@@ -8,6 +8,7 @@ nav:
   - "A Quick Tour": intro.md
   - Installation: installation.md
   - Demo Programs: demos.md
+  - Unit Tests: unittests.md
   - "API Reference":
       - Overview: api.md
       - "Queue ADT": adt.md
